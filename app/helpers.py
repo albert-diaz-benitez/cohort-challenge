@@ -1,5 +1,5 @@
 from IPython.display import display, Markdown
-
+from openai import OpenAI
 def get_response(client: OpenAI, messages: str, model: str = "gpt-3.5-turbo") -> str:
     return client.chat.completions.create(
         model=model,
